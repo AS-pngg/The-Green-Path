@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Memory Cards</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-green-100 min-h-screen flex flex-col items-center p-6">
+
+    <h1 class="text-3xl font-bold mb-4">🌍 Eco-Memory Cards</h1>
+
+    <div id="game-info" class="mb-2 text-lg">
+        Score: <span id="score">0</span> | Tries: <span id="tries">20</span>
+    </div>
+
+    <div id="fact-display" class="bg-white p-2 mb-4 rounded hidden"></div>
+
+    <div id="game-board" class="grid grid-cols-4 gap-4 mb-4"></div>
+
+    <div class="flex gap-2">
+        <button id="reset-button" class="bg-yellow-500 text-white px-4 py-2 rounded font-semibold">
+            🔄 Reset
+        </button>
+        <button id="save-score-button" class="bg-blue-500 text-white px-4 py-2 rounded font-semibold">
+            💾 Save Score
+        </button>
+    </div>
+
+    <div id="badge-display" class="mt-4 text-xl font-semibold text-green-700 hidden"></div>
+    <div id="game-over-message" class="mt-4 text-red-600 font-bold text-xl hidden">❌ Game Over – Try Again!</div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

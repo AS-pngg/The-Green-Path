@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trash Sorting Game</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #e6f4ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #game-area {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    border: 3px solid #4caf50;
+    background: #d0f0c0;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .trash-item {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: grab;
+  }
+
+  .bin {
+    width: 150px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .drag-over {
+    outline: 3px dashed black;
+  }
+
+  #bins {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  #scoreboard {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #game-over-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Trash Sorting Game</h1>
+
+<div id="scoreboard">
+  <span>Score: <span id="score">0</span></span>
+  &nbsp;&nbsp;
+  <span>Time: <span id="timer">60</span>s</span>
+</div>
+
+<div id="game-area"></div>
+
+<div id="bins">
+  <div class="bin" data-bin-type="organic" style="background-color: green;">Organic</div>
+  <div class="bin" data-bin-type="plastic" style="background-color: blue;">Plastic</div>
+  <div class="bin" data-bin-type="metal" style="background-color: gray;">Metal</div>
+  <div class="bin" data-bin-type="ewaste" style="background-color: black;">E-Waste</div>
+</div>
+
+<div id="start-screen">
+  <button id="start-button">Start Game</button>
+</div>
+
+<div id="game-over-screen">
+  <h2>Game Over!</h2>
+  <p>Your final score: <span id="final-score">0</span></p>
+  <button id="restart-button">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

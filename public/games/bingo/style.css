@@ -1,0 +1,12 @@
+/* Custom styles can go here. Tailwind handles most styling. */
+
+/* Example: Highlight correct selection with animation (optional) */
+button.correct {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
